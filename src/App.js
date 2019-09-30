@@ -1,45 +1,67 @@
 import React from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
+
+
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles } from '@material-ui/core/styles';
+import { Toolbar } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+
+import MainNavigation from './MainNavigation/MainNavigation';
+import Posts from './Post/Posts';
+import Footer from './Footer/Footer';
+
+
+import { makeStyles } from '@material-ui/styles';
+
+
+
+const useStyles = makeStyles({
   root: {
+    padding:25,
+    background: "#131313",
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  list: {
+    bacground:"green"
   },
   title: {
     flexGrow: 1,
-  },
-}));
+  }
+});
 
 
 const App = () => {
   const classes = useStyles();
   return (
     <div>
-      <AppBar position='static'>
-      <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            MaterialUI
+      <AppBar className={classes.root}>
+        <Toolbar>
+          <Typography variant="h5" className={classes.title}>
+            Material-UI DEMO
           </Typography>
-          <Button color="inherit">Linkki1</Button>
-          <Button color="inherit">Linkki2</Button>
-          <Button color="inherit">Linkki3</Button>
+
+          <MainNavigation />
+
         </Toolbar>
       </AppBar>
+     
+      <Posts>
 
-    <Button size="large" variant="contained" color="primary">Shiiiit Bro</Button>
-    <Button size="medium" variant="contained" color="primary">Shiiiit Bro</Button>
-    <Button size="small" variant="contained" color="primary">Shiiiit Bro</Button>
-    <button>shiit Brah html</button>
-  </div>
+
+      </Posts>
+
+      <div>
+      <Footer></Footer>
+      
+    </div>
+    </div>
+    
+
+
   );
 }
+
+
 
 export default App;
