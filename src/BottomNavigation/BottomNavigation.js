@@ -2,15 +2,15 @@ import React from 'react';
 import { List, ListItemText, ListItem, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-
 const useStyles = makeStyles({
     root: {
         margin: "100px 0 0 0",
     },
     listitem: {
-        display: "inline-block",
         width: 150,
-        textAlign: "right",        
+        textAlign: "left",
+        paddingLeft: "25px",
+        paddingTop: "15px"        
     },
     
   });
@@ -18,28 +18,20 @@ const useStyles = makeStyles({
 
 const listitems = [
     {
-        text:"Mainpage",
+        text:"Linkki",
         id: 1
     },
     {
-        text:"2:nd page",
+        text:"Lisalinkki",
         id: 2
     },
     {
-        text:"3:rd page",
+        text:"MoarLinks",
         id: 3
-    },
-    {
-        text:"And So",
-        id: 4
-    },
-    {
-        text:"On",
-        id: 5
     },
 ]
 
-const MainNavigation = () => {
+const BottomNavigation = () => {
     const classes = useStyles();
     return (
         <div>
@@ -60,4 +52,4 @@ const MainNavigation = () => {
     );
 };
 
-export default MainNavigation;
+export default BottomNavigation;

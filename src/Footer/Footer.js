@@ -4,13 +4,9 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
-
-
-
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/styles';
-
-
+import BottomNavigation from '../BottomNavigation/BottomNavigation';
 
 
 const useStyles = makeStyles({
@@ -21,12 +17,21 @@ const useStyles = makeStyles({
     float: 'right'
   },
   footer: {
-    backgroundColor:"green",
-
+    backgroundColor:"lightgray",
+    width: '100%',
+    float: 'right',
+    padding: '10px',
+    marginTop: '10px'
   },
+  links: {
+    backgroundColor:"lightgray",
+    width: '50%',
+    float: 'left',
+  },
+  
   TextField: {
     display: 'block',
-    margin: '10px'
+    marginBottom: '10px'
     
   }
  
@@ -35,7 +40,11 @@ const useStyles = makeStyles({
 const Footer = () => {
     const classes = useStyles();
     return(
+        
         <div className={classes.footer}>
+        <div className={classes.links}>
+            <BottomNavigation />
+        </div>    
             <form className={classes.root}>
                 <TextField className={classes.TextField} label="Nimi"> lollers</TextField>
                 <TextField className={classes.TextField} type="phone" label="Puhelin"> lollers</TextField>
@@ -49,6 +58,7 @@ const Footer = () => {
                 <RadioGroup>
                     <FormControlLabel value="insane" control={<Checkbox />} label="Insane" />
                 </RadioGroup>
+                <Button variant="contained" color="secondary">Submit</Button>
             </form>
         </div>
     );

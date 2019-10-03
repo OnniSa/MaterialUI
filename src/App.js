@@ -38,7 +38,7 @@ const App = () => {
       <AppBar className={classes.root}>
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
-            Material-UI DEMO
+            Super Awesome Material-UI
           </Typography>
 
           <MainNavigation />

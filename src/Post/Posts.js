@@ -56,7 +56,7 @@ const Posts = () => {
     const classes = useStyles();
     return (
         <div style={{ marginTop: "150px" }}>
-            <Grid container justify="center" alignItems="center" spacing={2}>
+            <Grid container justify="center" alignItems="center" spacing={0}>
                 {postitems.map(item => (
 
                     <Card className={classes.carditem} key={item.id}>
