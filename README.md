@@ -1,3 +1,9 @@
+## Description - Kuvaus
+
+Training project with React using MateriaUi components.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
